@@ -1,0 +1,24 @@
+<h1>PHR Login</h1>
+<%= form_for @login do |f| %> 
+  <% if @login.errors.any? %>
+  <div id="error_explanation">
+    <h2>Incorrect Login Information</h2>
+    <ul>
+    <% @login.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+	<%= f.label :email %> <%= f.label :password %>
+  </p>
+  <p>
+    <%= f.text_field :email %>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+  <!-- figure out how to change the text to say login -->
+    <%= f.submit %>
+  </p>
+<% end %>

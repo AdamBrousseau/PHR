@@ -1,0 +1,45 @@
+<h2>Profile </h2>
+
+<%= form_for @patient do |f| %>
+  <% if @patient.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@patient.errors.count, "error") %> prohibited
+      this patient from being saved:</h2>
+    <ul>
+    <% @patient.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+ <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :dob %><br>
+    <%= f.datepicker :dob %>
+  </p>
+ <p>
+    <%= f.label :health_card %><br>
+    <%= f.text_field :health_card %>
+  </p>
+   <p>
+    <%= f.label :blood_type %><br>
+    <%= f.select :blood_type %>
+	<!-- values: A+, A-, B+, B-, AB+, AB-, O+, O- -->
+  </p>
+  <p>
+    <%= f.label :gender %><br>
+    <%= f.select :gender %>
+	<!-- values: M, F -->
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

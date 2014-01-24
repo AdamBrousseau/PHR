@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  salt: MyString
+  last_login: 
+  login_attempts: 
+  account_lock: false
+
+two:
+  email: MyString
+  salt: MyString
+  last_login: 
+  login_attempts: 
+  account_lock: false
